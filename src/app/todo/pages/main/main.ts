@@ -26,6 +26,10 @@ export class MainPage {
     this.tasks.update(currentTasks => [...currentTasks, newTask])
   }
 
+  deleteTask(taskId: number) {
+    this.tasks.update((currentTasks) => currentTasks.filter((task) => task.id != taskId));
+  }
+
   onTaskNameChange(value: string) {
     this.taskName.set(value);
   }
