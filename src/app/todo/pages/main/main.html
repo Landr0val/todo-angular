@@ -17,12 +17,12 @@
       [type]="'text'"
       [placeholder]="'Escribe un ToDo'"
       #txtTask
-      (keyup.enter)="addTask(txtTask.value())"
+      (keyup.enter)="addTask(txtTask)"
     ></app-input>
     <app-button
       class="ml-4"
       [text]="'Agregar'"
-      (click)="addTask(txtTask.value())"
+      (click)="addTask(txtTask)"
     ></app-button>
   </div>
 </div>

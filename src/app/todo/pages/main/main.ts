@@ -16,14 +16,15 @@ export class MainPage {
 
   private static counter = signal(0);
 
-  addTask(taskName: string) {
+  addTask(inputRef: any) {
     MainPage.counter.update((v) => ++v)
     const newTask: Task = {
       id: MainPage.counter(),
-      text: taskName,
+      text: inputRef.value(),
       isActive: false
     }
     this.tasks.update(currentTasks => [...currentTasks, newTask])
+    inputRef.value.set('');
   }
 
   deleteTask(taskId: number) {
