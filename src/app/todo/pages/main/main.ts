@@ -13,11 +13,17 @@ export class MainPage {
   public tasks = signal<Task[]>([]);
   public taskName = signal<string>('');
   public taskIsActive = signal<boolean>(false);
+  public emptyError = signal<boolean>(false);
 
   private static counter = signal(0);
 
   addTask(inputRef: any) {
     MainPage.counter.update((v) => ++v)
+    this.emptyError.set(false);
+    if (!inputRef.value()) {
+      this.emptyError.set(true);
+      return;
+    }
     const newTask: Task = {
       id: MainPage.counter(),
       text: inputRef.value(),
