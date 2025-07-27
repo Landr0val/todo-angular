@@ -1,0 +1,36 @@
+<!-- Header -->
+<header
+  class="w-full bg-gray-100 py-6 px-8 shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff]"
+>
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center justify-between">
+      <!-- Logo/Título -->
+      <div class="flex items-center space-x-4">
+        <div
+          class="w-12 h-12 bg-gray-100 rounded-full shadow-[4px_4px_8px_#d1d9e6,-4px_-4px_8px_#ffffff] flex items-center justify-center"
+        >
+          <span class="text-2xl">📋</span>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-gray-700 tracking-wide">
+            TodoApp
+          </h1>
+          <p class="text-sm text-gray-500">Organize your tasks</p>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <nav class="flex items-center space-x-4">
+        <app-button [text]="'Home'" routerLink="/"></app-button>
+        <app-button [text]="'Tasks'" routerLink="/main"></app-button>
+
+        <!-- Avatar -->
+        <div
+          class="w-10 h-10 bg-gray-100 rounded-full shadow-[4px_4px_8px_#d1d9e6,-4px_-4px_8px_#ffffff] flex items-center justify-center cursor-pointer hover:shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] transition-all duration-200"
+        >
+          <span class="text-lg">👤</span>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
